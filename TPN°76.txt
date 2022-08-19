@@ -1,0 +1,40 @@
+INSERT INTO `tabla` (`id`, `NombresClientes`, `ApelidoCliente`, `FechaNacCliente`, `PesoCliente`, `AlturaCliente`, `DomicilioCliente`, `CodPostal`, `Movi01Cliente`, `Movil02Cliente`, `EmailCliente`)
+VALUES ('1', 'Lucas', 'Forchino', '24011979', '95,50', '1.,60', 'Jujuy 1234', '7600', '2236121212', '-', 'lucas@gmail.com'), 
+('2', 'Jorge', 'Solis', '01101945', '78,20', '1,80', 'Almafuerte 321', '8000', '2291614593', '2291614593', 'j@hotmail.com'), 
+('3', 'Javier', 'Fernandez', '02091975', '90,00', '1,77', 'Av.Paso 100', '7600', '2235444444', '2235444445', 'javier@gmail.com'), 
+('23', 'Jorge', 'Solis', '01011982', '100,00', '1,80', 'Av.Colon 4444', '7600', '22351666666', '22351666667', 'sol@gmail.com'), 
+('35', 'Juan', 'Mercado', '02021964', '89,60', '1,77', 'Av.Independencia 720', '7600', '2236166744', '2236166745', 'mercado@gmail.com');
+
+2)A)
+SELECT  FROM `tabla` WHERE `tabla`.`PesoCliente`= '90' AND `tabla`.`AlturaCliente` = '1.78';
+
+('23', 'Jorge', 'Solis', '01011982', '100,00', '1,80', 'Av.Colon 4444', '7600', '22351666666', '22351666667', 'sol@gmail.com')
+
+2)B) 
+SELECT  FROM `tabla` WHERE `tabla`.`DomicilioCliente` != '7600' AND `tabla`.`EmailCliente` == '@gmail';
+
+nadie
+
+2)C)
+SELECT avg (`tabla`.`alturaCliente` )as promedio from `tabla`;
+
+PROMEDIOS 1.7200000047683717
+
+2)D)
+SELECT MAX(`tabla`.`pesoCliente`)as maximo FROM `tabla`;
+
+MAXIMO 100
+
+2)E)
+SELECT MIN(`tabla`.FechaNacCliente)as minimo FROM `tabla`;
+
+MINIMO 01011982
+
+3)A)
+('35', 'Juan', 'Mercado', '04041972', '89,60', '1,77', 'Av.Independencia 720', '7600', '2236166744', '2236166745', 'mercado@gmail.com');
+
+3)B)
+('1', 'Lucas', 'Forchino', '24011979', '95,50', '1.,60', 'Jujuy 1234', '7600', '2236121212', '223445545', 'lucas@gmail.com');
+
+3)C)
+('3', 'Javier', 'Fernandez', '02091975', '90,00', '1,80', 'Av.Paso 100', '7600', '2235444444', '2235444445', 'javier@gmail.com');
