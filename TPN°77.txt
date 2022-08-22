@@ -1,0 +1,39 @@
+CREATE DATABASE TPN°77
+  CHARACTER SET DEFAULT
+  COLLATE DEFAULT;
+
+  CREATE TABLE tiendas (
+  id        int NOT NULL PRIMARY KEY,
+  nombre_comercial   varchar(30),
+  tipo               int,
+  direccion  varchar(30),
+  codigoPostal      int,
+  poblacion          int,
+  latencia           float,
+  longitud           float
+ ENGINE = InnoDB;
+
+A)`tiendas`.`direccion` LIKE "%castello"
+
+B)`tiendas`.`codigoPostal` = 7600 and `tiendas`.`poblacion` = 1
+
+
+C)`tiendas`.`tipo` = 1
+
+
+D) SELECT MAX(`tiendas`.`latitud`) AS maxlatitud FROM `tiendas`;
+
+
+E) SELECT MIN(`tiendas`.`longitud`) AS minlongitud FROM `tiendas`;
+
+
+3)
+A)SET   `tiendas`.`nombre_comercial` ='Ochoa'
+  WHERE  `tiendas`.`id` ='8';
+
+
+B) SET   `tiendas`.`latitud` ='-38.00001'
+  WHERE  `tiendas`.`nombre_comercial` ='wallace';
+
+C)SET   `tiendas`.`nombre_comercial` ='EEM 22'
+  WHERE  `tiendas`.`id` ='9';
