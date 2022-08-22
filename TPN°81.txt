@@ -1,0 +1,65 @@
+
+A)Crear una base de datos llamada: Marcas
+Crear una tabla llamada MARCAS que contenga los siguientes datos:IdMarca,NombreMarca,NombreCiudad,PRIMARY KEY
+
+	CREATE TABLE MARCAS (
+	IdMarca SMALLINT NOT NULL DEFAULT 1,
+	NombreMarca CHAR(10) NOT NULL,
+	NombreCiudad CHAR(60) NOT NULL,
+	PRIMARY KEY (idMarca))
+
+
+B)Crear una tabla llamada COCHES que contenga los siguientes datos:codcoche,nombre,modelo,PRIMARY KEY
+
+	CREATE TABLE COCHES (
+	codcoche SMALLINT NOT NULL,
+	nombre CHAR(15) NOT NULL,
+	modelo CHAR(10),
+	PRIMARY KEY (codcoche))
+
+
+C)Crear una tabla llamada MARCO que contenga los siguientes datos:IdMarca,codcoche
+Estabece de clave primaria a cifm y codcoche. Relaciona FOREIGN KEY con la tabla marcas. Relaciona FOREIGN KEY con la tabla Coches
+	CREATE TABLE MARCO (
+	IdMarca SMALLINT NOT NULL,
+	codcoche SMALLINT NOT NULL,
+	PRIMARY KEY (cifm,codcoche),
+	FOREIGN KEY (cifm) REFERENCES MARCA,
+	FOREIGN KEY (codcoche) REFERENCES COCHE)
+
+
+D)Insertar los siguientes datos en la tabla MARCAS:
+
+	INSERT INTO MARCAS VALUES (1,'vw','Mar del Plata')
+	INSERT INTO MARCAS VALUES (2,'renault','Rosario')
+	INSERT INTO MARCAS VALUES (3,'fiat','Cordoba')
+	INSERT INTO MARCAS VALUES (4,'ford','Neuquen')
+
+
+E)Selecciona todos los datos de la tabla MARCAS
+	 SELECT * FROM MARCAS
+
+
+F)Seleccionar el nombre y ciudad de la tabla MARCAS 
+	SELECT nombre, ciudad FROM MARCAS
+
+
+G)Seleccionar el nombre y ciudad de la tabla MARCAS que contenga IdMarca = 2
+	select nombre,ciudad from MARCAS where IdMarca = 2
+
+
+H)Seleccionar el nombre y ciudad de la tabla MARCAS que contenga ciudad = 'Neuquen'
+	select NombreMarca,ciudad from marca
+ 	 where ciudad = 'Neuquen'
+
+
+I) Seleccionar el nombre y ciudad de la tabla marcas donde la ciudad contenga la letra "S"
+	select nombre,ciudad
+   	from marcas
+   	where ciudad LIKE 'S%'
+
+
+j) Actualizar la diudad Neuquen por Jujuy en la tabla marcas
+	update marcas
+   	set ciudad = 'Nuequen'
+   	where ciudad = 'Jujuy'
