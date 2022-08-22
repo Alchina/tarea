@@ -1,0 +1,30 @@
+create table store(
+       id integer,
+       profile bool,
+       name varchar(30),
+       lat float,
+       ing float,
+       id_rubro int,
+       primary key(id)
+)
+
+2.
+A) SELECT * FROM store WHERE id > 100 && id < 2500;
+
+
+B)SELECT * FROM store WHERE profile >= 1 && profile <=3 && id>10000;
+
+
+C)SELECT * FROM store WHERE (id_rubro = 1 || id_rubro = 2 )&& LOCATE("Banco",name)>0;
+
+
+D)SELECT MAX(id),name FROM store;
+
+
+E) SELECT MIN(lat),name FROM store;
+
+
+3.
+A) UPDATE store SET name = "Banco Nacion de la Argentina" WHERE name = "Banco Nacion";
+B) UPDATE store SET name = "Musical Norte" WHERE name = "AGB";
+C) UPDATE store SET ing = -57.000001 WHERE name = "Astor";
