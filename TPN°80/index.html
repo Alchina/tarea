@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TPN°80 Ejemplo js</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        class Empleados {
+            constructor(nombre, añoIngreso, dirección) {
+                this.nombre = nombre;
+                this.añoIngreso = añoIngreso;
+                this.direccion = dirección;
+            }
+
+            getNombre(){
+            return this.nombre;
+            }
+
+            getAñoIngreso(){
+            return this.añoIngreso;
+            }
+
+            getDireccion(){
+            return this.direccion;
+            }
+
+
+        }
+
+        const empleado1 = new Empleados('Robert', 1994, '64C- WallsStreat');
+        document.write('Nombre del empleado:' +empleado1.nombre+ '<br>');
+        document.write('añoIngreso:' +empleado1.añoIngreso+ '<br>');
+        document.write('Direccion:' +empleado1.direccion+ '<br>');
+      
+        const empleado2 = new Empleados('Sam', 2000, '68D- WallsStreat');
+        document.write('Nombre del empleado:' + empleado2.nombre+ '<br>');
+        document.write('añoIngreso:' +empleado2.añoIngreso+ '<br>');
+        document.write('Direccion:' +empleado2.direccion+ '<br>');
+        
+        const empleado3 = new Empleados('John ', 1999, '26B- WallsStreat');
+        document.write('Nombre del empleado:' +empleado3.nombre+ '<br>');
+        document.write('añoIngreso:' +empleado3.añoIngreso+ '<br>');
+        document.write('Direccion:' +empleado3.direccion+ '<br>');
+    </script>
+
+</body>
+
+</html>
